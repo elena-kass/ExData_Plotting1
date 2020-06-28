@@ -38,7 +38,7 @@ df_sub$datetime <- as.POSIXct(paste(df_sub$Date, df_sub$Time))
 ###Step 4: Plot the graph and store it as a png. file
 ###--------------------------------------------------
 
-png(filename = "plo2.png", width = 480, height = 480, units = "px")
+png(filename = "plot2.png", width = 480, height = 480, units = "px")
 plot(df_sub$datetime, df_sub$Global_active_power, type="l", 
      xlab = "", ylab="Global Active Power (kilowatts)")
 dev.off()
