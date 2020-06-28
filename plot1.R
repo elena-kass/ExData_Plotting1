@@ -29,7 +29,7 @@ df_sub <- df[(df$Date == "2007-02-01" | df$Date == "2007-02-02"),]
 ###Step 3: Prepare the variables that will be plotted
 ###--------------------------------------------------
 #Convert Global_active_power from "chr" to "num"
-df$Global_active_power <- as.numeric(df$Global_active_power)
+df_sub$Global_active_power <- as.numeric(df_sub$Global_active_power)
 
 ###--------------------------------------------------
 ###Step 4: Plot the graph and store it as a png. file
@@ -37,9 +37,9 @@ df$Global_active_power <- as.numeric(df$Global_active_power)
 #The given plot needs to 480x480 pixels, a histogram with red columns, labeled x-axis,
 #main title and a y-axis that ranges from 0 to 1200
 
-png(filename = "plo1.png",
-    width = 480, height = 480, units = "px")
+png(filename = "plot1.png", width = 480, height = 480, units = "px")
 
 hist(df_sub$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)",
      ylim = c(0,1300), main = "Global Active Power")
 dev.off()
+
