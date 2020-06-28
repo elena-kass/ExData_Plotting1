@@ -29,7 +29,7 @@ df_sub <- df[(df$Date == "2007-02-01" | df$Date == "2007-02-02"),]
 ###Step 3: Prepare the variables that will be plotted
 ###--------------------------------------------------
 #Convert Global_active_power from "chr" to "num"
-df$Global_active_power <- as.numeric(df$Global_active_power)
+df_sub$Global_active_power <- as.numeric(df_sub$Global_active_power)
 
 #Create a variable that contains both date and time of class "POSIXct"
 df_sub$datetime <- as.POSIXct(paste(df_sub$Date, df_sub$Time))
